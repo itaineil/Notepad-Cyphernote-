@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cyphernote.cypherlayoutController">
+    
+    <top>
+        
+              <MenuBar>
+
+                  <menus>            
+            <Menu text="_File">
+                
+                      <items>
+                    
+                           <MenuItem fx:id="newFile" onAction="#createNew" style="-fx-pref-width: 80px; -fx-background-color: transparent;" text="New" />
+                       <MenuItem fx:id="openFile" onAction="#openFile" style="-fx-pref-width: 80px; -fx-background-color: transparent;" text="Open" /> 
+                       <MenuItem fx:id="saveFile" onAction="#saveFile" style="-fx-pref-width: 80px; -fx-background-color: transparent;" text="Save" />
+                       <MenuItem fx:id="saveAsFile" onAction="#saveAsFile" style="-fx-pref-width: 80px; -fx-background-color: transparent;" text="SaveAs" />
+                       <MenuItem fx:id="closeWindow" onAction="#close" text="Close" />
+                    
+                      </items>
+                
+                  </Menu>
+            
+                  <Menu text="_Edit">
+                
+                      <items>
+                      
+                             <MenuItem fx:id="copy" onAction="#onCopy" text="Copy" /> 
+                       <MenuItem fx:id="cut" onAction="#onCut" text="Cut" />
+                       <MenuItem fx:id="paste" onAction="#onPaste" text="Paste" />
+                       <MenuItem fx:id="selectAll" onAction="#onSelectAll" text="Select All" />
+                       <MenuItem fx:id="deleteNext" onAction="#deleteNextChar" text="Delete Next Character" />
+                       <MenuItem fx:id="deletePrevious" onAction="#deletePreviousChar" text="Delete Previous Character" />
+                           
+                        </items>
+                
+                  </Menu>
+            
+                  
+            <Menu mnemonicParsing="true" text="_Format">
+               <items>
+                        
+                              
+                        <Menu text="Text Color">
+                            
+                                <items>
+                         
+                               
+                          <MenuItem fx:id="fontGreen" onAction="#fontGreen" text="Green" />
+                          <MenuItem fx:id="fontBlue" onAction="#fontBlue" text="Blue" />   
+                          <MenuItem fx:id="fontRed" onAction="#fontRed" text="Red" /> 
+                          <MenuItem fx:id="fontBrown" onAction="#fontBrown" text="Brown" />
+                          <MenuItem fx:id="fontBlack" onAction="#fontDefault" text="Default" />
+                          
+                                
+                        
+                                </items>
+                          
+                                  
+                          
+                             </Menu>
+               </items>
+                    
+                         
+                </Menu>
+                
+                      <Menu text="_Help">
+                <items>
+                      <MenuItem fx:id="aboutCypherNote" onAction="#aboutCypher" text="About CypherNote" />
+                </items>
+                </Menu>
+                    
+                  
+            </menus>
+            
+              </MenuBar>
+        
+    </top>
+    
+    <bottom>
+        
+        <FlowPane prefHeight="20" prefWidth="30" style="-fx-background-color: white;-fx-border:blue" />
+    </bottom>
+   <left>
+      
+   </left>
+   <left>
+      <JFXDrawer BorderPane.alignment="LEFT" />
+   </left>
+    
+    
+</BorderPane>
